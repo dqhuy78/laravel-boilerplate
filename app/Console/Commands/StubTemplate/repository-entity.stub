@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Entities\Eloquents;
+
+use App\Entities\Eloquents\Relations\DummyRelation;
+
+class DummyClass extends BaseEntities
+{
+    use DummyRelation;
+
+    protected $table = '';
+
+    protected $fillable = [
+
+    ];
+}

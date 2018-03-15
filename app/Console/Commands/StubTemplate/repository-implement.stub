@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Repositories\Eloquents;
+
+use App\Repositories\Contracts\DummyContract;
+use App\Entities\Eloquents\DummyModel;
+
+class DummyClass extends BaseEloquentRepository implements DummyContract
+{
+    public function model()
+    {
+        return new DummyModel;
+    }
+}
