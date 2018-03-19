@@ -63,12 +63,14 @@ class CreateEntityCommand extends GeneratorCommand
                 'DummyRootNamespace',
                 'NamespacedDummyUserModel',
                 'DummyRelation',
+                'DummyMutator'
             ],
             [
                 $this->getNamespace($name),
                 $this->rootNamespace(),
                 config('auth.providers.users.model'),
                 $this->getNameInput() . 'Relation',
+                $this->getNameInput() . 'Mutator'
             ],
             $stub
         );

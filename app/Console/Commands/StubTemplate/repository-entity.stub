@@ -3,13 +3,24 @@
 namespace App\Entities\Eloquents;
 
 use App\Entities\Eloquents\Relations\DummyRelation;
+use App\Entities\Eloquents\Mutators\DummyMutator;
 
 class DummyClass extends BaseEntities
 {
-    use DummyRelation;
+    use DummyRelation, DummyMutator;
 
+    /**
+     * The table associated with the entity.
+     *
+     * @var string
+     */
     protected $table = '';
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $fillable = [
 
     ];

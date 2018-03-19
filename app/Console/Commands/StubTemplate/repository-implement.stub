@@ -5,8 +5,13 @@ namespace App\Repositories\Eloquents;
 use App\Repositories\Contracts\DummyContract;
 use App\Entities\Eloquents\DummyModel;
 
-class DummyClass extends BaseEloquentRepository implements DummyContract
+class DummyClass extends BaseRepository implements DummyContract
 {
+    /**
+     * The entity associated with this repository.
+     *
+     * @var object
+     */
     public function model()
     {
         return new DummyModel;
